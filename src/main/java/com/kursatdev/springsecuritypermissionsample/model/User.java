@@ -32,6 +32,7 @@ public class User implements UserDetails {
         this.age = builder.age;
         this.email = builder.email;
         this.password = builder.password;
+        this.role = builder.role;
     }
 
     public User() {}

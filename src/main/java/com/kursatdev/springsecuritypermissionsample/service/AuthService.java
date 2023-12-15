@@ -38,8 +38,9 @@ public class AuthService {
         var user = new User.Builder()
                 .name(request.name())
                 .email(request.email())
+                .age(request.age())
                 .password(passwordEncoder.encode(request.password()))
-                .role(Role.USER)
+                .role(request.role())
                 .build();
         userRepository.save(user);
         var jwt = jwtService.generateToken(user);
